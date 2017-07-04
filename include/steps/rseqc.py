@@ -325,8 +325,8 @@ class RSeQC(AbstractStep):
                                            stderr_path=log_stderr)
 
                 # remove log.txt which is created by geneBody_coverage.py
-                # in the current working directory
-                current_dir = os.getcwd()
-                file_del = current_dir + '/' + 'log.txt'
-                eg = run.new_exec_group()
-                eg.add_command([self.get_tool('rm'), file_del])
+                # in the current working directory lets lay it for now
+                #current_dir = os.getcwd()
+                #file_del = current_dir + '/' + 'log.txt'
+                #eg = run.new_exec_group()
+                #eg.add_command([self.get_tool('rm'), file_del])
