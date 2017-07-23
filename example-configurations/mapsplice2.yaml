@@ -46,7 +46,7 @@ tools:
         get_version: '--version'
 
     mapsplice2:
-        path: ['/home/alexander/workspace/git/uap/python_env/bin/python2.7', '/home/alexander/Programme/MapSplice-v2.2.1/mapsplice.py']
+        path: ['uap/python_env/bin/python2.7', 'mapsplice.py']
         get_version: '--version'
         exit_code: 2
 
