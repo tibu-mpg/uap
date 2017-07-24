@@ -96,7 +96,7 @@ class Mapsplice2(AbstractStep):
                         mapsplice.extend(['-p', str(self.get_option('p'))])
 
                     mapsplice.extend(['-c', self.get_option('c')])
-                    mapsplice.extend(['-c', self.get_option('x')])
+                    mapsplice.extend(['-x', self.get_option('x')])
                     mapsplice.extend(['-o', temp_dir])
                     mapsplice.extend(['-1', r1])
                     (r2 is not None) and (mapsplice.extend(['-2', r2]))
