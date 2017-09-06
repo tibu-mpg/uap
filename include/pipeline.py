@@ -66,9 +66,13 @@ class Pipeline(object):
                          "unavailable." % " ".join(command))
             sys.exit(1)
 
+        # refresh index
+        refresh_command = ['git', 'update-index', '--refresh']
+
         # now determine the Git hash of the repository
         command = ['git', 'describe', '--all', '--dirty', '--long']
         try:
+            subprocess.call(refresh_command)
             self.git_hash_tag = subprocess.check_output(command).strip()
         except:
             logger.error("Execution of %s failed." % " ".join(command))
